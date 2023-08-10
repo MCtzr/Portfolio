@@ -1,0 +1,198 @@
+<app-star-background>
+
+</app-star-background>
+<div class="superposedContainer">
+    <div id="presentation">
+        <div [@fadeInOut] class="grid-container-presentation">
+            <div class="tile-2-2-presentation content-centered">
+                <img [@fadeInOut] class="personnal-picture fadeElm" src="../../../assets/img/distory.png"
+                    alt="MyPicture">
+            </div>
+            <div class="presentation tile-3-2-presentation fadeElm">
+                <div class="flex">
+                    <h1 class="name">Matéo</h1>
+                    <h1 class="surname">&nbsp;CONDAT</h1>
+                </div>
+
+                <h2 class="subtitle">Software Engineer</h2>
+
+                <p class="pitch">I'm a student at the end of my software engineering formation at the University of
+                    Technology of Troyes.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div [@fadeInOut] class="content" id="content">
+        <div class="sticky" id="stickyDiv">
+            <div class="flex" id="skills">
+                <h1 class="title">Skills</h1>
+            </div>
+
+            <div class="tab fadeElm" id="tab-experience">
+                <ul class="tab-header tile-1-1">
+                    <li class="tab-header-elm tab-header-elm-active" (click)="switchTab($event)"
+                        data-content="Web Front">
+                        Web Front</li>
+                    <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)"
+                        data-content="Web Back">
+                        Web Back</li>
+                    <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)"
+                        data-content="Software Development">
+                        Software Development</li>
+                    <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)"
+                        data-content="Computer Graphics">
+                        Computer Graphics</li>
+                    <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Design">
+                        Design</li>
+                    <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Others">
+                        Others</li>
+                </ul>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Front"'>
+                    <p>Html / CSS : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                    </p>
+                    <p>JavaScript : <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+                    </p>
+                    <p>TypeScript : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </p>
+                    <p>PHP : <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+                    </p>
+                    <p>React : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                    </p>
+                    <p>Angular : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                    </p>
+                    <p>Bootstrap : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                    </p>
+                </div>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Back"'>
+                    <p>NodeJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                    </p>
+                    <p>ExpressJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                    </p>
+                    <p>Sequelize : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                    </p>
+                    <p>SQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </p>
+                    <p>MSSQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </p>
+                    <p>Java Spring : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+                    </p>
+                    <p>AWS : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                    </p>
+                </div>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Software Development"'>
+                    <p>C : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                    </p>
+                    <p>Java : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </p>
+                    <p>Python : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                    </p>
+                    <p>C# : <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
+                    </p>
+                    <p>Stencyl : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                    </p>
+                    <p>Prolog : <mat-progress-bar mode="determinate" value="35"></mat-progress-bar>
+                    </p>
+                </div>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Computer Graphics"'>
+                    <p>Three.js : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </p>
+                    <p>Canevas JS : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                    </p>
+                    <p>Unity : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+                    </p>
+                </div>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Design"'>
+                    <p>Gimp : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                    </p>
+                    <p>Draw.io : <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+                    </p>
+                    <p>Figma : <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
+                    </p>
+                </div>
+
+                <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Others"'>
+                    <p>Git : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                    </p>
+                    <p>Fl Studio : <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                    </p>
+                    <p>Office : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex bg-white" id="projects">
+                <h1 class="title">Projects</h1>
+            </div>
+
+            <div class="bg-white">
+                <div class="grid-container">
+                    <div class="white-block tile-2-2 tile fadeElm dark-text">
+
+                    </div>
+
+                    <div class="white-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="white-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="white-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="white-block tile-2-2 tile fadeElm">
+
+                    </div>
+
+                    <div class="white-block tile-1-1 tile fadeElm">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex bg-black">
+                <h1 class="title-black">Skills</h1>
+            </div>
+
+            <div class="bg-black">
+                <div class="grid-container">
+                    <div class="black-block tile-2-2 tile fadeElm dark-text">
+
+                    </div>
+
+                    <div class="black-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="black-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="black-block tile-1-1 tile fadeElm">
+
+                    </div>
+
+                    <div class="black-block tile-2-2 tile fadeElm">
+
+                    </div>
+
+                    <div class="black-block tile-1-1 tile fadeElm">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

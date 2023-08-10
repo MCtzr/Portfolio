@@ -1,0 +1,36 @@
+<nav class="navbar" id="navbar">
+
+    <div class="navbar-nav">
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('presentation')">
+                <span class="navbar-nav-text">Presentation</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('skills')">
+                <span class="navbar-nav-text">Skills</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('projects')">
+                <span class="navbar-nav-text">Projects</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('sticky')">
+                <span class="navbar-nav-text">Skills</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="copyToClipboard()" (mouseenter)="changeBackText()">
+                <button class="navbar-nav-text my-button">My CV</button>
+            </a>
+        </div>
+    </div>
+
+</nav>
