@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-
+import { FadeEffectService } from 'src/app/components/fade-effect.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css'],
+  styleUrls: ['./portfolio.component.css', '../../app.component.scss'],
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
@@ -21,63 +21,27 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class PortfolioComponent {
   innerHeight: number = window.innerHeight;
   fadeElmVisible: boolean = true;
-  tab = "Web Front";
+  scrollValue: number = 0;
 
-  ngOnInit() {
-    const options = {
-      root: null,
-      rootMargin: '-50px',
-      threshold: 0.2,
-    };
+  constructor(private FadeEffectService: FadeEffectService) { }
 
-    const observerFade = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('invisible');
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.add('invisible');
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, options);
-
-    const myFades = document.querySelectorAll('.fadeElm');
-
-    myFades.forEach(element => {
-      if (element.id !== '') {
-        this.addFadeObserver(element.id)
-      }
-      else {
-        observerFade.observe(element);
-      }
-    });
-
-  }
-
-  switchTab(event: { target: any; }) {
-    const tabElement = event.target;
-
-    const clickedTab = event.target; // Élément de l'onglet cliqué
-    const contentId = clickedTab.dataset.content; // Récupère l'identifiant du contenu associé
-
-    this.tab = contentId;
-
-    // Sélectionne tous les éléments ayant la classe "tab-header-elm"
-    const allTabs = document.querySelectorAll('.tab-header-elm');
-
-    // Retire la classe "active" à tous les éléments ayant la classe "tab-header-elm"
-    allTabs.forEach(tab => tab.classList.remove('tab-header-elm-active'));
-
-    // Retire la classe "active" à tous les éléments ayant la classe "tab-header-elm"
-    allTabs.forEach(tab => tab.classList.add('tab-header-elm-passive'));
-
-    clickedTab.classList.add('tab-header-elm-active');
-    clickedTab.classList.remove('tab-header-elm-passive');
+  ngAfterViewInit() {
+    this.FadeEffectService.setObserverFade();
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
+    if (window.scrollY > 350 && window.scrollY < this.innerHeight) {
+      document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 5 / (window.scrollY ** 5)) + "px");
+    }
+    else if (window.scrollY <= this.innerHeight / 3) {
+      document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
+    }
+    else {
+      document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
+    }
+
     // Obtenez la position de défilement verticale actuelle de la page
 
     const content = document.getElementById("content")
@@ -91,62 +55,24 @@ export class PortfolioComponent {
 
     if (window.innerWidth > 870) {
       if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible) {
-        this.removeFadeObserver('tab-experience');
+        this.FadeEffectService.removeFadeObserver('first-container');
       }
       else if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && !this.fadeElmVisible) {
-        this.addFadeObserver('tab-experience');
+        this.FadeEffectService.addFadeObserver('first-container');
       }
       this.fadeElmVisible = window.scrollY < 1 * window.innerHeight;
 
-      const myTab = document.getElementById("tab-experience")
+      const myTab = document.getElementById("first-container")
 
       const myWidth = 60 + ((delta / (0.5 * window.innerHeight)) * 40)
 
       if (myTab) {
         document.documentElement.style.setProperty('--experience-width', myWidth + '%');
-        console.log(myWidth)
       }
     }
     else {
-      this.removeFadeObserver('tab-experience');
+      this.FadeEffectService.removeFadeObserver('first-container');
     }
 
   }
-
-  fadeObservers: Map<string, IntersectionObserver> = new Map();
-
-  addFadeObserver(myId: string) {
-    const element = document.getElementById(myId);
-    if (element) {
-      const options = {
-        root: null,
-        rootMargin: '-50px',
-        threshold: 0.2,
-      };
-
-      const observerFade = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('invisible');
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.add('invisible');
-            entry.target.classList.remove('visible');
-          }
-        });
-      }, options);
-
-      observerFade.observe(element);
-      this.fadeObservers.set(myId, observerFade); // Store the observer in the map
-    }
-  }
-
-  removeFadeObserver(myId: string) {
-    const observer = this.fadeObservers.get(myId);
-    if (observer) {
-      observer.disconnect(); // Disconnect the observer
-      this.fadeObservers.delete(myId); // Remove the observer from the map
-    }
-  }
-
 }

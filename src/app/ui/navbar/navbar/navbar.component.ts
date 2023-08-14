@@ -42,7 +42,7 @@ export class NavbarComponent {
     var stickyDelta = 0
 
     if (targetElement) {
-      if (divId === "projects" && window.innerWidth > 871) {
+      if (divId !== "presentation" && window.innerWidth > 871 && window.scrollY < 900) {
         stickyDelta = 0.5 * window.innerHeight
       }
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY + stickyDelta + 1;
@@ -63,12 +63,8 @@ export class NavbarComponent {
     el.select();
     document.execCommand(' My CV ');
     document.body.removeChild(el);
-    const bouton = document.getElementById("emailButton") as HTMLButtonElement;
-    bouton.innerHTML = "Downloaded"
   }
 
   changeBackText() {
-    const bouton = document.getElementById("emailButton") as HTMLButtonElement;
-    bouton.innerHTML = " My CV "
   }
 }

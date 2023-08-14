@@ -110,7 +110,7 @@ export class StarBackgroundComponent {
 
   getStarsMaterial() {
 
-    const starSprite0 = new THREE.TextureLoader().load(`../../assets/img/etoile1-min.png`);
+    const starSprite0 = new THREE.TextureLoader().load(`assets/img/etoile1-min.png`);
 
     const starMaterial0 = new THREE.PointsMaterial({ size: 250, sizeAttenuation: true, map: starSprite0, alphaTest: 0.5, transparent: true });
 

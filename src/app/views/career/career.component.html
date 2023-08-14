@@ -1,0 +1,197 @@
+<div class="timeline">
+
+    <div class="timeline-grid">
+
+        <div class="tile-1-1 order-3">
+
+            <div class="content-background">
+                <div class="content-element" id="highschool-content" style="top: 300px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'highschool-cercle', 'content-element-passive': tabTimeline !== 'highschool-cercle'}">
+                    <p>highschool-content</p>
+                </div>
+                <div class="content-element" id="computer-sciences-content" style="top: 450px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'computer-sciences-cercle', 'content-element-passive': tabTimeline !== 'computer-sciences-cercle'}">
+                    <p>computer-sciences-content</p>
+                </div>
+                <div class="content-element" id="internship-content" style="top: 600px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'internship-cercle', 'content-element-passive': tabTimeline !== 'internship-cercle'}">
+                    <p>internship-content</p>
+                </div>
+                <div class="content-element" id="travel-content" style="top: 750px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'travel-cercle', 'content-element-passive': tabTimeline !== 'travel-cercle'}">
+                    <p>travel-content</p>
+                </div>
+                <div class="content-element" id="utt-degree-content" style="top: 900px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'utt-degree-cercle', 'content-element-passive': tabTimeline !== 'utt-degree-cercle'}">
+                    <p>utt-degree-content</p>
+                </div>
+                <div class="content-element" id="searching-content" style="top: 1050px;"
+                    [ngClass]="{'content-element-active': tabTimeline === 'searching-cercle', 'content-element-passive': tabTimeline !== 'searching-cercle'}">
+                    <p>searching-content</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-1-1 curve-grid order-1">
+            <div class="tile-1-1">
+            </div>
+            <svg class="tile-1-2" width="100%" height="100%" viewBox="0 0 500 300">
+                <!-- Courbe de Bézier -->
+                <path d="M -10 0 Q 190 70, 240 257" fill="none" stroke="var(--color-s-2)" stroke-width="7" />
+            </svg>
+
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('highschool-cercle')">
+                    <circle cx="250" cy="0" r="45" stroke="var(--color-s-2)" stroke-width="7"
+                        data-id="highschool-cercle" class="cercle cercle-active" />
+                    <circle class="overlay" cx="250" cy="0" stroke-width="0"
+                        *ngIf="tabTimeline !== 'highschool-cercle'"></circle>
+                </g>
+                <!-- Image à l'intérieur du cercle -->
+                <clipPath id="highschool">
+                    <circle cx="250" cy="0" r="40" />
+                </clipPath>
+
+                <image x="225" y="-22" width="50" height="50" xlink:href="assets/icons/diplome.png"
+                    clip-path="url(#highschool)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'highschool-cercle' ? 'M 275 45 C 340 120, 340 60, 390 130' : 'M 275 35 C 340 120, 340 60, 390 130'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve"></path>
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('computer-sciences-cercle')">
+                    <circle cx="410" cy="20" r="45" stroke="var(--color-s-2)" stroke-width="7"
+                        data-id="computer-sciences-cercle" class="cercle cercle-passive" />
+                    <circle class="overlay" cx="410" cy="20" r="40" *ngIf="tabTimeline !== 'computer-sciences-cercle'">
+                    </circle>
+                </g>
+
+
+                <!-- Image à l'intérieur du cercle -->
+                <clipPath id="computer-sciences">
+                    <circle cx="410" cy="20" r="40" />
+                </clipPath>
+
+                <image x="385" y="-3" width="50" height="50" xlink:href="assets/icons/programmation.png"
+                    clip-path="url(#computer-sciences)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'computer-sciences-cercle' ? 'M 390 70 C 385 120, 130 60, 95 141' : 'M 390 60 C 385 120, 130 60, 95 141'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve" />
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('internship-cercle')">
+                    <circle cx="80" cy="30" r="45" stroke="var(--color-s-2)" stroke-width="7"
+                        data-id="internship-cercle" class="cercle cercle-passive" />
+                    <circle class="overlay" cx="80" cy="30" stroke-width="0"
+                        *ngIf="tabTimeline !== 'internship-cercle'"></circle>
+                </g>
+
+                <clipPath id="internship">
+                    <circle cx="80" cy="30" r="40" />
+                </clipPath>
+
+                <image x="58" y="8" width="50" height="50" xlink:href="assets/icons/stage.png"
+                    clip-path="url(#internship)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'internship-cercle' ? 'M 105 75 C 160 140, 180 90, 220 140' : 'M 105 65 C 160 140, 180 90, 220 140'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve" />
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('travel-cercle')">
+                    <circle cx="245" cy="30" r="45" stroke="var(--color-s-2)" stroke-width="7" data-id="travel-cercle"
+                        class="cercle cercle-passive" />
+                    <circle class="overlay" cx="245" cy="30" stroke-width="0" *ngIf="tabTimeline !== 'travel-cercle'">
+                    </circle>
+                </g>
+
+                <!-- Image à l'intérieur du cercle -->
+                <clipPath id="travel">
+                    <circle cx="245" cy="30" r="40" />
+                </clipPath>
+
+                <image x="220" y="5" width="50" height="50" xlink:href="assets/icons/voyage.png"
+                    clip-path="url(#travel)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'travel-cercle' ? 'M 275 74 C 340 120, 340 60, 390 130' : 'M 275 60 C 340 120, 340 60, 390 130'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve" />
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('utt-degree-cercle')">
+                    <circle cx="410" cy="20" r="45" stroke="var(--color-s-2)" stroke-width="7"
+                        data-id="utt-degree-cercle" class="cercle cercle-passive" />
+                    <circle class="overlay" cx="410" cy="20" stroke-width="0"
+                        *ngIf="tabTimeline !== 'utt-degree-cercle'">
+                    </circle>
+                </g>
+
+                <!-- Image à l'intérieur du cercle -->
+                <clipPath id="utt-degree">
+                    <circle cx="410" cy="20" r="40" />
+                </clipPath>
+
+                <image x="385" y="-2" width="50" height="50" xlink:href="assets/icons/diplomeSupp.png"
+                    clip-path="url(#utt-degree)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'utt-degree-cercle' ? 'M 390 70 C 385 120, 130 60, 95 141' : 'M 390 60 C 385 120, 130 60, 95 141'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve" stroke-dasharray="10,10" />
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+
+                <!-- Point de départ -->
+                <g class="icon-cercle" (click)="switchTab('searching-cercle')">
+                    <circle cx="80" cy="30" r="45" stroke="var(--color-s-2)" stroke-width="7" data-id="searching-cercle"
+                        class="cercle cercle-passive" />
+                    <circle class="overlay" cx="80" cy="30" troke-width="0" *ngIf="tabTimeline !== 'searching-cercle'">
+                    </circle>
+                </g>
+
+                <!-- Image à l'intérieur du cercle -->
+                <clipPath id="searching">
+                    <circle cx="80" cy="30" r="40" />
+                </clipPath>
+
+                <image x="55" y="3" width="50" height="50" xlink:href="assets/icons/loupe.png"
+                    clip-path="url(#searching)" class="no-point" />
+
+                <!-- Courbe de Bézier -->
+                <path
+                    [attr.d]="tabTimeline === 'searching-cercle' ? 'M 90 85 C 140 140, 250 75, 260 200' : 'M 90 75 C 140 140, 250 75, 260 200'"
+                    fill="none" stroke="var(--color-s-2)" stroke-width="7" class="curve" stroke-dasharray="10,10" />
+            </svg>
+            <svg class="tile-1-1 timeline-elm" width="100%" height="100%" viewBox="0 0 500 150">
+
+                <path d="M 260 50 C 230 30 230 30 260 110 C  290 30 290 30 260 50 Z " fill="var(--color-s-3)"
+                    stroke="var(--color-s-2)" stroke-width="7" />
+            </svg>
+            <div class="tile-1-1">
+            </div>
+        </div>
+
+        <div class="tile-1-1 order-2">
+            <svg width="100%" height="100%" viewBox="0 0 200 1650" class="background-content-curve">
+                <!-- Courbe de Bézier -->
+                <path d="M 500 -1 Q 100 -1, -700 -1 Q 100 200, 100 775 Q 100 1450, -300 1650 Q 100 1650, 500 1650"
+                    fill="var(--color-p-7)" />
+            </svg>
+        </div>
+
+
+
+    </div>
+</div>

@@ -9,14 +9,22 @@ import { Subscription } from 'rxjs';
 })
 export class FooterComponent {
 
-  email: string = "matcitizer@gmail.com";
+  email = "condatmateo@gmail.com";
 
   copyToClipboard() {
-
+    const el = document.createElement('textarea');
+    el.value = this.email;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('Copy');
+    document.body.removeChild(el);
+    const bouton = document.getElementById("emailButton") as HTMLButtonElement;
+    bouton.innerHTML = "Copied"
   }
 
   changeBackText() {
-
+    const bouton = document.getElementById("emailButton") as HTMLButtonElement;
+    bouton.innerHTML = " Copy "
   }
 
 }

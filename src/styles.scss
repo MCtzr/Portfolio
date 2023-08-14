@@ -396,10 +396,10 @@ template {
     --my-black: #000010;
     --my-white: #eaeaf5;
 
-    --color-s-1: rgb(223, 219, 214);
+    --color-s-1: rgb(223, 220, 217);
     --color-s-2: rgb(200, 175, 132);
     --color-s-3: rgb(172, 143, 92);
-    --color-s-4: rgb(35, 22, 0);
+    --color-s-4: rgb(114, 77, 13);
     --color-s: rgb(87, 55, 4);
 }
 
@@ -461,10 +461,12 @@ li {
     border: 3px solid var(--theme);
 }
 
-@media screen and (max-width: 1300px) {
-    body {
-        font-size: 1em;
-    }
+.flex {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
 }
 
 html,
@@ -502,4 +504,29 @@ body {
     /* Style lorsque le bouton a le focus (après avoir été cliqué) */
     outline: none;
     /* Supprime la mise en évidence par défaut du focus */
+}
+
+.fadeElm {
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease, transform 0.3s ease !important;
+}
+
+.invisible {
+    opacity: 0;
+    -webkit-transform: scaleX(0.7) scaleY(0.7);
+    transform: scaleX(0.7) scaleY(0.7);
+}
+
+.visible {
+    opacity: 1;
+    -webkit-transform: scaleX(1) scaleY(1);
+    transform: scaleX(1) scaleY(1);
+}
+
+@media screen and (max-width: 870px) {
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }

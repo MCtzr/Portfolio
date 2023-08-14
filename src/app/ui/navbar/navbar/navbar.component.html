@@ -9,8 +9,14 @@
         </div>
 
         <div class="navbar-nav-item">
-            <a class="navbar-nav-link scroll-link" (click)="scrollTo('skills')">
-                <span class="navbar-nav-text">Skills</span>
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('context')">
+                <span class="navbar-nav-text">Context</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav-item">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('experience')">
+                <span class="navbar-nav-text">Experience</span>
             </a>
         </div>
 
@@ -21,16 +27,17 @@
         </div>
 
         <div class="navbar-nav-item">
-            <a class="navbar-nav-link scroll-link" (click)="scrollTo('sticky')">
+            <a class="navbar-nav-link scroll-link" (click)="scrollTo('skills')">
                 <span class="navbar-nav-text">Skills</span>
             </a>
         </div>
 
         <div class="navbar-nav-item">
             <a class="navbar-nav-link scroll-link" (click)="copyToClipboard()" (mouseenter)="changeBackText()">
-                <button class="navbar-nav-text my-button">My CV</button>
+                <button class="navbar-nav-text my-button" id="cv-button">My CV</button>
             </a>
         </div>
+
     </div>
 
 </nav>

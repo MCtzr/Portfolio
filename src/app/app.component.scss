@@ -1,0 +1,97 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 350px 200px 350px;
+    grid-auto-rows: 35vh;
+    grid-column-gap: 2vh;
+    column-gap: 2vh;
+    grid-row-gap: 2vh;
+    row-gap: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    max-width: 950px;
+}
+
+.tab {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-auto-rows: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--my-white);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bg-black {
+    background-color: var(--color-s-1);
+}
+
+.bg-white {
+    background-color: var(--color-p-7);
+}
+
+.tile {
+    display: grid;
+    text-align: center;
+    transition: all 0.5s;
+    padding: 30px;
+}
+
+.tile-2-2 {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+}
+
+.tile-3-3 {
+    grid-column: auto/span 3;
+    grid-row: auto/span 3;
+}
+
+.tile-3-2 {
+    grid-column: auto/span 3;
+    grid-row: auto/span 2;
+}
+
+.tile-1-1 {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.tile-1-2 {
+    grid-column: auto;
+    grid-row: auto/span 2;
+}
+
+.tile-2-1 {
+    grid-column: auto/span 2;
+    grid-row: auto;
+}
+
+.title {
+    font-size: 76px;
+    font-family: title;
+    margin: 0;
+    line-height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.white-text {
+    color: var(--color-s-1);
+}
+
+.black-text {
+    color: var(--color-p-7);
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.content-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

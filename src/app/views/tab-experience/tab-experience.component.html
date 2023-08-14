@@ -1,0 +1,93 @@
+<div class="tab" id="tab-experience">
+    <ul class="tab-header tile-1-1">
+        <li class="tab-header-elm tab-header-elm-active" (click)="switchTab($event)" data-content="Web Front">
+            Web Front</li>
+        <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Web Back">
+            Web Back</li>
+        <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)"
+            data-content="Software Development">
+            Software Development</li>
+        <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Computer Graphics">
+            Computer Graphics</li>
+        <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Design">
+            Design</li>
+        <li class="tab-header-elm tab-header-elm-passive" (click)="switchTab($event)" data-content="Others">
+            Others</li>
+    </ul>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Front"'>
+        <p>Html / CSS : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+        </p>
+        <p>JavaScript : <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+        </p>
+        <p>TypeScript : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+        </p>
+        <p>PHP : <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+        </p>
+        <p>React : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+        </p>
+        <p>Angular : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+        </p>
+        <p>Bootstrap : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+        </p>
+    </div>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Back"'>
+        <p>NodeJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+        </p>
+        <p>ExpressJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+        </p>
+        <p>Sequelize : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+        </p>
+        <p>SQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+        </p>
+        <p>MSSQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+        </p>
+        <p>Java Spring : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+        </p>
+        <p>AWS : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </p>
+    </div>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Software Development"'>
+        <p>C : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </p>
+        <p>Java : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+        </p>
+        <p>Python : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </p>
+        <p>C# : <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
+        </p>
+        <p>Stencyl : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+        </p>
+        <p>Prolog : <mat-progress-bar mode="determinate" value="35"></mat-progress-bar>
+        </p>
+    </div>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Computer Graphics"'>
+        <p>Three.js : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+        </p>
+        <p>Canevas JS : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </p>
+        <p>Unity : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+        </p>
+    </div>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Design"'>
+        <p>Gimp : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </p>
+        <p>Draw.io : <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+        </p>
+        <p>Figma : <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
+        </p>
+    </div>
+
+    <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Others"'>
+        <p>Git : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </p>
+        <p>Fl Studio : <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        </p>
+        <p>Office : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+        </p>
+    </div>
+</div>

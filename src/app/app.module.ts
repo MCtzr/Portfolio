@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavbarComponent } from './ui/navbar/navbar/navbar.component';
+import { PresentationComponent } from './views/presentation/presentation.component';
+import { TabExperienceComponent } from './views/tab-experience/tab-experience.component';
+import { CareerComponent } from './views/career/career.component';
+import { ProjectsComponent } from './views/projects/projects.component';
+import { ContextComponent } from './views/context/context.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,12 @@ import { NavbarComponent } from './ui/navbar/navbar/navbar.component';
     FooterComponent,
     StarBackgroundComponent,
     PortfolioComponent,
-    AuthenticatorComponent,
-    NavbarComponent
+    NavbarComponent,
+    PresentationComponent,
+    TabExperienceComponent,
+    CareerComponent,
+    ProjectsComponent,
+    ContextComponent
   ],
   imports: [
     BrowserModule,
