@@ -1,6 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener } from '@angular/core';
-import { FadeEffectService } from 'src/app/components/fade-effect.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tab-experience',
@@ -22,11 +21,9 @@ export class TabExperienceComponent {
 
   tab = "Web Front";
 
-  constructor(private FadeEffectService: FadeEffectService) { }
+  constructor() { }
 
   switchTab(event: { target: any; }) {
-    const tabElement = event.target;
-
     const clickedTab = event.target; // Élément de l'onglet cliqué
     const contentId = clickedTab.dataset.content; // Récupère l'identifiant du contenu associé
 

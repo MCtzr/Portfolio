@@ -1,6 +1,4 @@
-import { AfterViewInit, Component, DoCheck, ElementRef, HostListener, NgZone, OnInit } from '@angular/core';
-import { GlobalVariablesService } from 'src/app/components/global-variables.service';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',

@@ -31,18 +31,6 @@ export class PortfolioComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
-    if (window.scrollY > 350 && window.scrollY < this.innerHeight) {
-      document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 5 / (window.scrollY ** 5)) + "px");
-    }
-    else if (window.scrollY <= this.innerHeight / 3) {
-      document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
-    }
-    else {
-      document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
-    }
-
-    // Obtenez la position de défilement verticale actuelle de la page
 
     const content = document.getElementById("content")
     const stickyDiv = document.getElementById("stickyDiv")
@@ -52,6 +40,32 @@ export class PortfolioComponent {
     if (content && stickyDiv) {
       delta = stickyDiv.offsetTop - content.offsetTop
     }
+
+    document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
+    if (window.scrollY > 350 && window.scrollY < this.innerHeight) {
+      document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 5 / (window.scrollY ** 5)) + "px");
+    }
+    else if (window.scrollY <= 350) {
+      document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
+    }
+    else {
+      document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
+    }
+
+    if (window.scrollY > 350 && window.scrollY < 1 * this.innerHeight) {
+      document.documentElement.style.setProperty('--scroll-value-context-border', (30 * 1000 ** 4 / (window.scrollY ** 4)) + "px");
+    }
+    else if (window.scrollY <= 350) {
+      document.documentElement.style.setProperty('--scroll-value-context-border', (window.innerWidth + "px"));
+    }
+    else if (window.scrollY >= this.innerHeight) {
+      document.documentElement.style.setProperty('--scroll-value-context-border', ((30 * 1000 ** 4 / (this.innerHeight ** 4) * ((0.5 * window.innerHeight) / (10 * delta + (0.5 * window.innerHeight))) - 1) + "px"));
+    }
+    else {
+      document.documentElement.style.setProperty('--scroll-value-context-border', (0 + "px"));
+    }
+
+    // Obtenez la position de défilement verticale actuelle de la page
 
     if (window.innerWidth > 870) {
       if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible) {

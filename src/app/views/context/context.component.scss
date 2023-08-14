@@ -1,0 +1,87 @@
+.context-container {
+    width: 100%;
+    transition: width ease 0.3s;
+    height: 100vh;
+    border-radius: calc(var(--scroll-value-context-border));
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    pointer-events: all;
+    background-color: var(--color-s-1);
+    overflow: hidden;
+}
+
+.context-text-container {
+    padding: 60px 60px;
+    transform: translateX(calc(var(--scroll-value-context)*(-1)));
+    transition: all 0.3s ease;
+    height: calc(60vh - 120px);
+    align-items: center;
+}
+
+.context-img-container {
+    padding: 60px 60px;
+    height: calc(60vh - 120px);
+    transition: all 0.2s ease;
+    transform: translateX(var(--scroll-value-context));
+}
+
+.context-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.context-container p {
+    color: var(--color-p-7);
+    font-family: MyTextBold;
+    text-align: justify;
+    height: 100%;
+}
+
+.source-container {
+    margin: auto;
+    margin-top: 7vh;
+    display: flex;
+    width: 50vw;
+    height: 85px;
+    justify-content: center;
+    transition: all 0.5s ease;
+    transform: translateY(calc(var(--scroll-value-context)*10));
+}
+
+.source-icon {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+}
+
+.source-icon a {
+    border: solid 20px var(--color-s-2);
+    border-radius: 21px;
+    background-color: var(--color-s-2);
+    display: flex;
+    width: 40px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.source-icon p {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: var(--my-white);
+    font-weight: bold;
+    font-family: titleBold;
+}
+
+.source-icon a:hover {
+    width: 140px;
+}
+
+#utt-img {
+    width: 100%;
+}

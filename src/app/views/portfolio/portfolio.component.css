@@ -20,6 +20,7 @@
 :root {
     --scroll-value: 0px;
     --scroll-value-context: 0px;
+    --scroll-value-context-border: 50px;
 }
 
 .superposedContainer {

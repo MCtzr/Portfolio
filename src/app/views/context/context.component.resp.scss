@@ -1,0 +1,111 @@
+@media screen and (max-width: 1700px) {
+
+    .context-text-container {
+        padding: 60px 30px;
+    }
+
+    .context-img-container {
+        padding: 60px 30px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    .context-text-container {
+        padding: 60px 10px;
+    }
+
+    .context-img-container {
+        padding: 60px 10px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    .context-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: 35vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+    }
+
+    #utt-img {
+        width: 70%;
+    }
+
+    .context-text-container {
+        padding: 0px 10px;
+    }
+
+    .context-img-container {
+        padding: 0px 10px;
+    }
+
+    .context-container {
+        position: relative;
+        display: block;
+    }
+
+    .source-container {
+        margin: 0;
+        width: 100%;
+        background-color: var(--color-s-2);
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 870px) {
+
+    .context-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: calc(40vh);
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .context-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: calc(40vh);
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .context-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: calc(40vh);
+        margin-left: auto;
+        margin-right: auto;
+        width: 70vw;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    .context-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: calc(43vh);
+        margin-left: auto;
+        margin-right: auto;
+        width: 80vw;
+    }
+
+}

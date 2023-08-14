@@ -82,6 +82,12 @@
 #tab-experience {
     width: 60%;
     transition: width ease 0.3s;
-    grid-auto-rows: 85vh;
+    grid-auto-rows: calc(85vh - 60px);
     pointer-events: all;
+}
+
+@media screen and (max-width: 870px) {
+    #tab-experience {
+        width: 100%;
+    }
 }

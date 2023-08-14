@@ -1,11 +1,4 @@
-import { Component, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
-import { GlobalVariablesService } from 'src/app/components/global-variables.service';
-import { Subscription } from 'rxjs';
-
-interface NavbarToggle {
-  screenWidth: number;
-  collapsed: boolean
-}
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +11,7 @@ export class NavbarComponent {
 
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event: any): void {
+  onScroll(): void {
     const currentScrollY = window.scrollY;
     const navbar = document.getElementById("navbar")
 
@@ -52,19 +45,5 @@ export class NavbarComponent {
         behavior: 'smooth'
       });
     }
-  }
-
-  email: string = "matcitizer@gmail.com";
-
-  copyToClipboard() {
-    const el = document.createElement('textarea');
-    el.value = this.email;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand(' My CV ');
-    document.body.removeChild(el);
-  }
-
-  changeBackText() {
   }
 }
