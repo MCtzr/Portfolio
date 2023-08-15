@@ -95,3 +95,10 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 800px) {
+
+    .bg-white {
+        background-color: var(--color-p-8);
+    }
+}

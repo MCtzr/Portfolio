@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-career',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CareerComponent {
   tabTimeline = "highschool-cercle";
+
+  constructor(private el: ElementRef) { }
 
   switchTab(id: string) {
     const clickedTab = document.querySelector(`[data-id="${id}"]`) as SVGCircleElement;
@@ -30,4 +32,48 @@ export class CareerComponent {
     }
 
   }
+
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+
+    const children = this.el.nativeElement.querySelectorAll('.content-element');
+
+    if (children) {
+      children.forEach((childRef: any) => {
+
+        const parent = this.el.nativeElement.querySelector('.content-background');
+
+        const child = childRef;
+
+        const marginY = (window.innerHeight - child.clientHeight) / 2;
+
+        const parentRect = parent.getBoundingClientRect();
+        const contentElementRect = child.getBoundingClientRect();
+
+        if (0 < parentRect.top) {
+          child.style.position = 'absolute';
+          child.style.top = marginY + "px";
+          console.log("top")
+        }
+        else if (child.clientHeight + 2 * marginY > parentRect.bottom) {
+          child.style.position = 'absolute';
+          child.style.top = "auto";
+          child.style.bottom = marginY + "px";
+          console.log("bot")
+        }
+        else {
+          child.style.position = 'fixed';
+          child.style.top = marginY + "px";
+          console.log("fixed")
+        }
+
+        console.log("parentRect.bottom = " + parentRect.top)
+
+      })
+    }
+
+  }
+
 }

@@ -85,7 +85,14 @@ export class PortfolioComponent {
       }
     }
     else {
-      this.FadeEffectService.removeFadeObserver('first-container');
+      const myTab = document.getElementById("first-container")
+
+      if (myTab) {
+        this.FadeEffectService.removeFadeObserver('first-container');
+        myTab.classList.remove('invisible');
+        myTab.classList.add('visible');
+      }
+
     }
 
   }

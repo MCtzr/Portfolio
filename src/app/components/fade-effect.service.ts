@@ -15,8 +15,6 @@ export class FadeEffectService {
       threshold: 0.2,
     };
 
-    console.log("test")
-
     const observerFade = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
