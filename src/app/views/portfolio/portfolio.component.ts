@@ -41,28 +41,43 @@ export class PortfolioComponent {
       delta = stickyDiv.offsetTop - content.offsetTop
     }
 
-    document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
-    if (window.scrollY > 350 && window.scrollY < this.innerHeight) {
-      document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 5 / (window.scrollY ** 5)) + "px");
-    }
-    else if (window.scrollY <= 350) {
-      document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
-    }
-    else {
-      document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
-    }
+    if (window.innerWidth > 870) {
+      document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
+      if (window.scrollY > 350 && window.scrollY < this.innerHeight) {
+        document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 5 / (window.scrollY ** 5)) + "px");
+      }
+      else if (window.scrollY <= 350) {
+        document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
+      }
+      else {
+        document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
+      }
 
-    if (window.scrollY > 350 && window.scrollY < 1 * this.innerHeight) {
-      document.documentElement.style.setProperty('--scroll-value-context-border', (30 * 1000 ** 4 / (window.scrollY ** 4)) + "px");
-    }
-    else if (window.scrollY <= 350) {
-      document.documentElement.style.setProperty('--scroll-value-context-border', (window.innerWidth + "px"));
-    }
-    else if (window.scrollY >= this.innerHeight) {
-      document.documentElement.style.setProperty('--scroll-value-context-border', ((30 * 1000 ** 4 / (this.innerHeight ** 4) * ((0.5 * window.innerHeight) / (10 * delta + (0.5 * window.innerHeight))) - 1) + "px"));
+      if (window.scrollY < 1 * this.innerHeight) {
+        document.documentElement.style.setProperty('--scroll-value-context-border', (30 * 1000 ** 3 / (window.scrollY ** 3)) + "px");
+      }
+      else {
+        document.documentElement.style.setProperty('--scroll-value-context-border', ((30 * 1000 ** 4 / (this.innerHeight ** 4) * ((0.5 * window.innerHeight) / (10 * delta + (0.5 * window.innerHeight))) - 1) + "px"));
+      }
     }
     else {
-      document.documentElement.style.setProperty('--scroll-value-context-border', (0 + "px"));
+      document.documentElement.style.setProperty('--scroll-value', window.scrollY + "px");
+      if (window.scrollY > 350 && window.scrollY < 0.8 * this.innerHeight) {
+        document.documentElement.style.setProperty('--scroll-value-context', (10 * 1000 ** 4 / (window.scrollY ** 4)) + "px");
+      }
+      else if (window.scrollY <= 350) {
+        document.documentElement.style.setProperty('--scroll-value-context', (window.innerWidth + "px"));
+      }
+      else {
+        document.documentElement.style.setProperty('--scroll-value-context', (0 + "px"));
+      }
+
+      if (window.scrollY < 0.8 * this.innerHeight) {
+        document.documentElement.style.setProperty('--scroll-value-context-border', (1 * 1000 ** 5 / (window.scrollY ** 6)) + "px");
+      }
+      else {
+        document.documentElement.style.setProperty('--scroll-value-context-border', (0 + "px"));
+      }
     }
 
     // Obtenez la position de défilement verticale actuelle de la page

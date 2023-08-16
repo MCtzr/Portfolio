@@ -134,4 +134,13 @@
         margin-left: 0;
         margin-right: 0;
     }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .fixed-footer {
+        position: relative;
+
+    }
 }

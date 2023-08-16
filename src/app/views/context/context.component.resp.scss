@@ -39,10 +39,6 @@
         padding: 0px 10px;
     }
 
-    .context-img-container {
-        padding: 0px 10px;
-    }
-
     .context-container {
         position: relative;
         display: block;
@@ -63,10 +59,24 @@
     .context-grid {
         display: grid;
         grid-template-columns: 100%;
-        grid-auto-rows: calc(40vh);
+        grid-auto-rows: 70vh;
+        height: 70vh;
         margin-left: auto;
         margin-right: auto;
         width: 50vw;
+    }
+
+    #utt-img,
+    .context-img-container {
+        display: none;
+    }
+
+    .context-text-container {
+        height: 70vh;
+    }
+
+    .context-text-container p {
+        height: fit-content;
     }
 
 }
@@ -106,6 +116,10 @@
         margin-left: auto;
         margin-right: auto;
         width: 80vw;
+    }
+
+    .context-text-container {
+        padding: 0px 0px;
     }
 
 }

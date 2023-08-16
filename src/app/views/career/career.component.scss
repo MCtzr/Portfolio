@@ -115,8 +115,16 @@ svg {
 
 .content-element {
     width: 800px;
-    border: 1px solid #333;
-    height: fit-content;
+    border: 5px solid var(--color-s-4);
+    background-color: var(--color-s-1);
+    border-radius: 5px;
+    height: 460px;
+    overflow: hidden;
+}
+
+.content-element h2 {
+    font-size: 1.75em;
+    font-family: TitleBold;
 }
 
 .order-3 {
@@ -154,6 +162,10 @@ svg {
     width: 90%;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.visit-card-design {
+    position: absolute;
 }
 
 @keyframes slideInLeft {
