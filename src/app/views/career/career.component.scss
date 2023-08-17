@@ -115,9 +115,10 @@ svg {
 
 .content-element {
     width: 800px;
-    border: 5px solid var(--color-s-4);
     background-color: var(--color-s-1);
     border-radius: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     height: 460px;
     overflow: hidden;
 }

@@ -8,24 +8,23 @@ import { Component, HostListener } from '@angular/core';
 
 export class NavbarComponent {
   previousScrollY = window.scrollY;
-
+  isScrolling = false;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
     const currentScrollY = window.scrollY;
     const navbar = document.getElementById("navbar")
 
-
-    if (currentScrollY > this.previousScrollY) {
+    if (currentScrollY > this.previousScrollY || this.isScrolling !== false) {
       if (navbar) {
         navbar.style.top = '-60px';
       }
-    } else {
+    }
+    else {
       if (navbar) {
         navbar.style.top = '-5px';
       }
     }
-
     this.previousScrollY = currentScrollY;
   }
 
@@ -44,6 +43,16 @@ export class NavbarComponent {
         top: targetPosition,
         behavior: 'smooth'
       });
+
+      this.setIsScrolling(true);
+
+      setTimeout(() => {
+        this.setIsScrolling(false);
+      }, 1500);
     }
+  }
+
+  setIsScrolling(value: boolean) {
+    this.isScrolling = value;
   }
 }
