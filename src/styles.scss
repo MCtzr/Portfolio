@@ -397,6 +397,7 @@ template {
     --my-white: #eaeaf5;
 
     --color-s-1: rgb(223, 220, 217);
+    --color-s-1-2: rgb(217, 209, 202);
     --color-s-2: rgb(200, 175, 132);
     --color-s-3: rgb(172, 143, 92);
     --color-s-4: rgb(114, 77, 13);
@@ -435,11 +436,6 @@ body {
     overflow: var(--isScrollable);
 }
 
-a {
-    color: var(--my-white);
-
-}
-
 p,
 li {
     font-size: 1.25em;
@@ -452,13 +448,13 @@ li {
 }
 
 *::-webkit-scrollbar-track {
-    background: none;
+    background: var(--color-p-8);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--my-white);
+    background-color: var(--color-s-3);
     border-radius: 20px;
-    border: 3px solid var(--theme);
+    border: 3px solid var(--color-s-3);
 }
 
 .flex {
@@ -508,7 +504,7 @@ body {
 }
 
 .fadeElm {
-    transition: opacity 0.3s ease, -webkit-transform 0.3s ease, transform 0.3s ease !important;
+    transition: opacity 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), -webkit-transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), filter 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
 }
 
 .invisible {

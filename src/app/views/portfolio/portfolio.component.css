@@ -30,16 +30,6 @@
     pointer-events: none;
 }
 
-.white-block {
-    background-color: var(--color-s-3);
-    border-radius: 20px;
-}
-
-.black-block {
-    background-color: var(--color-p-7);
-    border-radius: 20px;
-}
-
 .dark-text {
     font-family: myTextBold;
 }

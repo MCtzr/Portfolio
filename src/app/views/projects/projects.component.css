@@ -1,0 +1,69 @@
+#zombie-project {
+    background-image: url(../../../assets/img/Zombie/coverBackground.png);
+    background-repeat: repeat;
+    background-size: 100%;
+    animation: moveBackground 100s linear infinite;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.zombie-logo {
+    width: 50%;
+    z-index: 1;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+        /* Position de départ (en haut à gauche) */
+    }
+
+    to {
+        background-position: 3852px 960px;
+        /* Position d'arrivée (vers le bas et la droite) */
+    }
+}
+
+.white-block {
+    background-color: var(--color-s-3);
+    border-radius: 20px;
+}
+
+.black-block {
+    pointer-events: all;
+    background-color: var(--color-s-1-2);
+    border-radius: 20px;
+}
+
+.black-block:hover {
+    filter: drop-shadow(0px 0px 10px var(--color-p-3));
+    cursor: pointer;
+}
+
+h2,
+h3 {
+    color: var(--color-p-8);
+    font-family: Title;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 600px) {
+
+    #zombie-project {
+        order: 1;
+    }
+
+    #LO10-project,
+    #fractal-project {
+        order: 2;
+    }
+}

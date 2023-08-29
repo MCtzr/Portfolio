@@ -35,7 +35,6 @@
 .tile {
     display: grid;
     text-align: center;
-    transition: all 0.5s;
     padding: 30px;
 }
 
@@ -102,9 +101,19 @@
     flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
-    .bg-white {
-        background-color: var(--color-p-8);
+    .grid-container {
+        width: fit-content;
+        grid-template-columns: 35vw 20vw 35vw;
+        grid-auto-rows: 30vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .grid-container {
+        grid-template-columns: 45vw 45vw;
+        grid-auto-rows: 45vw;
     }
 }

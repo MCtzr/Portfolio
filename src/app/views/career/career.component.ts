@@ -6,16 +6,28 @@ import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@a
   styleUrls: ['./career.component.scss', '../portfolio/portfolio.component.css', '../../app.component.scss']
 })
 export class CareerComponent {
-  tabTimeline = "highschool-cercle";
+  tabTimeline = "";
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {
+
+  }
+
+  ngOnInit() {
+    if (window.innerWidth > 1500) {
+      this.tabTimeline = "highschool-cercle";
+      const clickedTab = document.querySelector(`[data-id="highschool-cercle"]`) as SVGCircleElement;
+
+      if (clickedTab) {
+        clickedTab.classList.add('cercle-active');
+        clickedTab.classList.remove('cercle-passive');
+      }
+    }
+  }
 
   switchTab(id: string) {
     const clickedTab = document.querySelector(`[data-id="${id}"]`) as SVGCircleElement;
 
     this.tabTimeline = id;
-
-    console.log(id)
 
     // Sélectionne tous les éléments ayant la classe "tab-header-elm"
     const allTabs = document.querySelectorAll('.cercle');
@@ -31,6 +43,19 @@ export class CareerComponent {
       clickedTab.classList.remove('cercle-passive');
     }
 
+  }
+
+  removeTab() {
+    // Sélectionne tous les éléments ayant la classe "tab-header-elm"
+    const allTabs = document.querySelectorAll('.cercle');
+
+    // Retire la classe "active" à tous les éléments ayant la classe "tab-header-elm"
+    allTabs.forEach(tab => tab.classList.remove('cercle-active'));
+
+    // Retire la classe "active" à tous les éléments ayant la classe "tab-header-elm"
+    allTabs.forEach(tab => tab.classList.add('cercle-passive'));
+
+    this.tabTimeline = "";
   }
 
 

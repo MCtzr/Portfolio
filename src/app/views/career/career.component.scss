@@ -141,9 +141,10 @@ svg {
 }
 
 .career-content-grid {
-    width: 100%;
+    margin: auto;
+    width: 90%;
     display: grid;
-    grid-template-columns: 45% 10% 45%;
+    grid-template-columns: 50% 0% 50%;
     grid-auto-rows: auto;
     grid-column-gap: 0vh;
     column-gap: 0vh;
@@ -156,11 +157,13 @@ svg {
     margin-top: auto;
     margin-bottom: auto;
     padding: 0px 10%;
+    pointer-events: all;
+    z-index: 5;
 }
 
 .career-content-img {
     border-radius: 20px;
-    width: 90%;
+    width: 80%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -197,6 +200,67 @@ svg {
     }
 }
 
+
+.cross-div {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 50px;
+    display: flex;
+}
+
+.cross-character {
+    text-align: center;
+    width: 30px;
+    line-height: 50px;
+    pointer-events: all;
+    user-select: none;
+    z-index: 20;
+    font-size: 2em;
+    color: var(--color-p-8);
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.cross-character:hover {
+    cursor: pointer;
+    color: var(--color-s);
+}
+
+.cross-character:active {
+    font-size: 1.7em;
+    color: var(--color-s);
+}
+
+
+
+@media screen and (max-width: 1500px) {
+
+    .content-background {
+        margin-left: -700px;
+        width: 100vw;
+        background: none;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-element {
+        pointer-events: all;
+
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .content-element {
+        width: 90vw;
+        height: calc(90vw * 9/16);
+    }
+}
+
 @media screen and (max-width: 800px) {
     .background-content-curve {
         display: none;
@@ -218,6 +282,10 @@ svg {
         grid-row-gap: 0vh;
         row-gap: 0vh;
         min-height: fit-content;
+    }
+
+    .content-background {
+        margin-left: -800px;
     }
 
     .curve-grid {

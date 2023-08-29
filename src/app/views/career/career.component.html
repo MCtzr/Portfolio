@@ -14,6 +14,10 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
                     <h2 class="content-centered bold black-text ">Sept. 2019 : High School Diploma</h2>
 
 
@@ -27,7 +31,7 @@
                                 Science, and Chemistry.
                             </p>
                         </span>
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/campusUTT.jpg" />
                         </span>
                     </div>
@@ -41,12 +45,16 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
                     <h2 class="content-centered bold black-text ">Sept. 2021 : Computer sciences program</h2>
 
 
 
                     <div class="career-content-grid">
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/informatique.jpg" />
                         </span>
                         <span class="tile-2-1 career-content-text black-text bold">
@@ -67,17 +75,23 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
-                    <h2 class="content-centered bold black-text ">Sept. 2022 : High School Diploma</h2>
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
+                    <h2 class="content-centered bold black-text ">Sept. 2022 : Internship</h2>
 
                     <div class="career-content-grid">
                         <span class="tile-2-1 career-content-text black-text bold">
                             <p>During my studies, I had the opportunity to realize a 6-month internship at Capgemini
-                                Engineering Toulouse. During it, I made the full stack development of a data managment
-                                web app. <br><br>Here, I've learned a lot about professional programming with GitHub and
+                                Engineering Toulouse. During it, I made the <a href="#capgemini-project">full stack
+                                    development of a data managment
+                                    web app</a>. <br><br>Here, I've learned a lot about professional programming with
+                                GitHub and
                                 project managment with Scrum-Agile approach.
                             </p>
                         </span>
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/capgemini.png" />
                         </span>
                     </div>
@@ -91,10 +105,14 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
                     <h2 class="content-centered bold black-text ">Sept. 2023 : High School Diploma</h2>
 
                     <div class="career-content-grid">
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/erasmus.jpg" />
                         </span>
                         <span class="tile-2-1 career-content-text black-text bold">
@@ -116,6 +134,10 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
                     <h2 class="content-centered bold black-text ">Jul. 2024 : High School Diploma</h2>
 
                     <div class="career-content-grid">
@@ -125,7 +147,7 @@
                                 feel free to contact me!
                             </p>
                         </span>
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/diplome.jpg" />
                         </span>
                     </div>
@@ -139,10 +161,14 @@
                         <line x1="725" x2="832" y1="482" y2="375" stroke="var(--color-s-4)" stroke-width="65" />
                     </svg>
 
+                    <div class="cross-div">
+                        <p class="cross-character" (click)="removeTab()">🗙</p>
+                    </div>
+
                     <h2 class="content-centered bold black-text ">Feb. 2024 : End-of-study internship</h2>
 
                     <div class="career-content-grid">
-                        <span class="tile-1-1 career-content-text">
+                        <span class="tile-1-1 content-centered">
                             <img class="career-content-img" src="assets/img/searching.jpg" />
                         </span>
                         <span class="tile-2-1 career-content-text black-text bold">
@@ -168,7 +194,7 @@
                 <!-- Point de départ -->
                 <g class="icon-cercle" (click)="switchTab('highschool-cercle')">
                     <circle cx="250" cy="0" r="45" stroke="var(--color-s-2)" stroke-width="7"
-                        data-id="highschool-cercle" class="cercle cercle-active" />
+                        data-id="highschool-cercle" class="cercle cercle-passive" />
                     <circle class="overlay" cx="250" cy="0" stroke-width="0"
                         *ngIf="tabTimeline !== 'highschool-cercle'"></circle>
                 </g>
