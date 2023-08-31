@@ -8,13 +8,16 @@ import { StarBackgroundComponent } from './ui/star-background/star-background.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NavbarComponent } from './ui/navbar/navbar/navbar.component';
 import { PresentationComponent } from './views/presentation/presentation.component';
 import { TabExperienceComponent } from './views/tab-experience/tab-experience.component';
 import { CareerComponent } from './views/career/career.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { ContextComponent } from './views/context/context.component';
+import { ProjectTextComponent } from './ui/project-text/project-text.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,15 @@ import { ContextComponent } from './views/context/context.component';
     TabExperienceComponent,
     CareerComponent,
     ProjectsComponent,
-    ContextComponent
+    ContextComponent,
+    ProjectTextComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
 
   ],
   providers: [],

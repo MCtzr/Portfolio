@@ -1,0 +1,12 @@
+<div class="all">
+
+    <h2 mat-dialog-title class="title">{{name}}</h2>
+
+    <mat-dialog-content>
+        <p class="dialog">{{text}}</p>
+
+        <button class="button" *ngIf="link">See more</button>
+    </mat-dialog-content>
+
+    <img class="cross" src="../../../assets/icons/cross.png" (click)="close()" />
+</div>

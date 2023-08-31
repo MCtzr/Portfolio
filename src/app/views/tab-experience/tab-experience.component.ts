@@ -1,10 +1,10 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-tab-experience',
   templateUrl: './tab-experience.component.html',
-  styleUrls: ['./tab-experience.component.css', '../../app.component.scss'],
+  styleUrls: ['./tab-experience.component.scss', '../../app.component.scss'],
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
@@ -20,8 +20,7 @@ import { Component } from '@angular/core';
 export class TabExperienceComponent {
 
   tab = "Web Front";
-
-  constructor() { }
+  tabValue = [0, 0, 0, 0, 0, 0, 0, 0]
 
   switchTab(event: { target: any; }) {
     const clickedTab = event.target; // Élément de l'onglet cliqué
@@ -42,5 +41,14 @@ export class TabExperienceComponent {
     clickedTab.classList.remove('tab-header-elm-passive');
   }
 
+  hoverSkill(id: number, value: number) {
+
+    this.tabValue[id] = value
+
+  }
+
+  resetProgress(id: number) {
+    this.tabValue[id] = 0;
+  }
 
 }

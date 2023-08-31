@@ -16,78 +16,342 @@
     </ul>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Front"'>
-        <p>Html / CSS : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-        </p>
-        <p>JavaScript : <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
-        </p>
-        <p>TypeScript : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
-        </p>
-        <p>PHP : <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-        </p>
-        <p>React : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
-        </p>
-        <p>Angular : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-        </p>
-        <p>Bootstrap : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-        </p>
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 90)" (mouseleave)="resetProgress(0)">
+
+                <img src="assets/img/skills/html.jpg" alt="" width="50%">
+                <div class="spinner"><mat-progress-spinner mode="determinate"
+                        [value]="tabValue[0]"></mat-progress-spinner>
+                </div>
+
+            </div>
+
+            <p>Html</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 90)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/css.jpg" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Css</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 75)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/js.jpg" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Javascript</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(3, 70)" (mouseleave)="resetProgress(3)">
+                <img src="assets/img/skills/ts.jpg" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[3]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Typescript</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(4, 50)" (mouseleave)="resetProgress(4)">
+                <img src="assets/img/skills/php.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[4]" class="spinner"></mat-progress-spinner>
+
+            </div>
+            <p>Php</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(5, 80)" (mouseleave)="resetProgress(5)">
+                <img src="assets/img/skills/react.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[5]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>React</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(6, 90)" (mouseleave)="resetProgress(6)">
+                <img src="assets/img/skills/angular.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[6]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Angular</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(7, 90)" (mouseleave)="resetProgress(7)">
+                <img src="assets/img/skills/bootstrap.png" alt="" width="50%">
+                <mat-progress-spinner #spinner mode="determinate" [value]="tabValue[7]"
+                    class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Bootstrap</p>
+        </div>
     </div>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Web Back"'>
-        <p>NodeJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
-        </p>
-        <p>ExpressJS : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
-        </p>
-        <p>Sequelize : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
-        </p>
-        <p>SQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
-        </p>
-        <p>MSSQL : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
-        </p>
-        <p>Java Spring : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
-        </p>
-        <p>AWS : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-        </p>
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 80)" (mouseleave)="resetProgress(0)">
+                <img src="assets/img/skills/node.png" alt="" width="50%">
+                <div class="spinner"><mat-progress-spinner mode="determinate"
+                        [value]="tabValue[0]"></mat-progress-spinner>
+                </div>
+            </div>
+
+            <p>Node.js</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 80)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/express.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>ExpressJS</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 80)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/sequelize.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Sequelize</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(3, 70)" (mouseleave)="resetProgress(3)">
+                <img src="assets/img/skills/sql.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[3]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Sql</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(4, 70)" (mouseleave)="resetProgress(4)">
+                <img src="assets/img/skills/mssql.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[4]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>MSSQL</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(5, 20)" (mouseleave)="resetProgress(5)">
+                <img src="assets/img/skills/spring.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[5]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Spring</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(6, 40)" (mouseleave)="resetProgress(6)">
+                <img src="assets/img/skills/aws.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[6]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>AWS</p>
+        </div>
     </div>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Software Development"'>
-        <p>C : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
-        </p>
-        <p>Java : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
-        </p>
-        <p>Python : <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-        </p>
-        <p>C# : <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
-        </p>
-        <p>Stencyl : <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-        </p>
-        <p>Prolog : <mat-progress-bar mode="determinate" value="35"></mat-progress-bar>
-        </p>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 60)" (mouseleave)="resetProgress(0)">
+                <img src="assets/img/skills/c.png" alt="" width="50%">
+                <div class="spinner"><mat-progress-spinner mode="determinate"
+                        [value]="tabValue[0]"></mat-progress-spinner>
+                </div>
+            </div>
+
+            <p>C</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 70)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/java.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Java</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 40)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/python.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Python</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(3, 75)" (mouseleave)="resetProgress(3)">
+                <img src="assets/img/skills/js.jpg" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[3]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Javascript</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(4, 90)" (mouseleave)="resetProgress(4)">
+                <img src="assets/img/skills/stencyl.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[4]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Stencyl</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(5, 35)" (mouseleave)="resetProgress(5)">
+                <img src="assets/img/skills/prolog.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[5]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Prolog</p>
+        </div>
+
     </div>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Computer Graphics"'>
-        <p>Three.js : <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
-        </p>
-        <p>Canevas JS : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
-        </p>
-        <p>Unity : <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
-        </p>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 70)" (mouseleave)="resetProgress(0)">
+                <img src="assets/img/skills/three.png" alt="" width="50%">
+                <div class="spinner"><mat-progress-spinner mode="determinate"
+                        [value]="tabValue[0]"></mat-progress-spinner>
+                </div>
+            </div>
+
+            <p>Three.js</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 20)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/leaflet.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Leaflet</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 30)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/svg.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>SVG</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(3, 20)" (mouseleave)="resetProgress(3)">
+                <img src="assets/img/skills/vega.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[3]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Vega</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(4, 20)" (mouseleave)="resetProgress(4)">
+                <img src="assets/img/skills/unity.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[4]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Unity 3D</p>
+        </div>
     </div>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Design"'>
-        <p>Gimp : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
-        </p>
-        <p>Draw.io : <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
-        </p>
-        <p>Figma : <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
-        </p>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 60)" (mouseleave)="resetProgress(0)">
+                <img src="assets/img/skills/gimp.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[0]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Gimp</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 85)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/drawio.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Draw.io</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 45)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/figma.png" alt="" width="50%">
+                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Figma</p>
+        </div>
     </div>
 
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Others"'>
-        <p>Git : <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
-        </p>
-        <p>Fl Studio : <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
-        </p>
-        <p>Office : <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
-        </p>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 60)" (mouseleave)="resetProgress(0)">
+                <img src="assets/img/skills/git.png" alt="" width="50%">
+                <mat-progress-spinner color="var(--color-s)" mode="determinate" [value]="tabValue[0]"
+                    class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>Git</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 100)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/fl.png" alt="" width="50%">
+                <mat-progress-spinner color="var(--color-s)" mode="determinate" [value]="tabValue[1]"
+                    class="spinner"></mat-progress-spinner>
+
+            </div>
+
+            <p>FL Studio</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 80)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/office.png" alt="" width="50%">
+                <mat-progress-spinner color="var(--color-s)" mode="determinate" [value]="tabValue[2]"
+                    class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Office</p>
+        </div>
     </div>
 </div>

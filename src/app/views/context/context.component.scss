@@ -16,8 +16,6 @@
     transition: all 0.3s ease;
     height: calc(60vh - 120px);
     align-items: center;
-    overflow: auto;
-    direction: rtl;
 }
 
 .context-img-container {
@@ -40,7 +38,6 @@
     color: var(--color-p-7);
     font-family: MyTextBold;
     text-align: justify;
-    height: 100%;
 }
 
 .source-container {
@@ -86,10 +83,4 @@
 
 #utt-img {
     width: 100%;
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--color-s-1-2);
-    border-radius: 20px;
-
 }

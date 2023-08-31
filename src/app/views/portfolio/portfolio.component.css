@@ -1,6 +1,5 @@
 #first-container {
     width: var(--experience-width);
-    transition: width ease 0.3s;
     min-height: fit-content;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -57,7 +56,8 @@ h3 {
 }
 
 .content {
-    height: 6000px
+
+    height: calc(450vh + 1600px);
 }
 
 .container {
@@ -69,6 +69,11 @@ h3 {
 
 
 @media screen and (max-width: 1000px) {
+
+    .content {
+        height: calc(300vh + 120vw + 1600px)
+    }
+
     .grid-container {
         grid-template-columns: 35vw 20vw 35vw;
         grid-auto-rows: 27.5vw;
@@ -86,12 +91,17 @@ h3 {
 
 @media screen and (max-width: 870px) {
 
+    .content {
+        height: fit-content;
+    }
+
     #tab-experience {
         width: 100%;
     }
 
     .sticky {
         position: relative;
+        height: fit-content;
     }
 
     .flex {

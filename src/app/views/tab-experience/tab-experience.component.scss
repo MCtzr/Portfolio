@@ -64,8 +64,8 @@
 .skill-content {
     color: var(--my-black);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 #tab-experience {
@@ -73,6 +73,59 @@
     transition: width ease 0.3s;
     grid-auto-rows: calc(85vh - 60px);
     pointer-events: all;
+}
+
+.skill-item {
+    border-radius: 100%;
+    border: solid 2px var(--color-s-1);
+    width: 100px;
+    height: 100px;
+    margin: 0vw 1.2vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item img {
+    pointer-events: all;
+    border-radius: 5px;
+
+}
+
+.skill-item img {
+    filter: blur(0); // Définissez la valeur initiale du flou à 0
+    transition: opacity 0.3s ease, filter 0.3s ease; // Ajoutez une transition pour une animation fluide
+}
+
+
+.skill-item:hover img {
+    filter: blur(2px); // Applique le flou au survol
+    opacity: 0.6;
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+
+}
+
+.skill-content ::ng-deep mat-progress-spinner circle {
+    stroke: var(--color-s-3);
+}
+
+mat-progress-spinner.spinner {
+    width: 50px;
+    height: 50px;
 }
 
 @media screen and (max-width: 870px) {

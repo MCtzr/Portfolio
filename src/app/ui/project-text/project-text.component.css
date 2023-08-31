@@ -1,0 +1,32 @@
+.all {
+    background-color: var(--color-p-8);
+    border-radius: 0px;
+    border: 2px rgb(255, 255, 255) solid;
+}
+
+.title,
+.dialog {
+    color: white;
+    white-space: pre-wrap;
+    font-family: 'MyText', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px
+}
+
+.cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+}
+
+.cross:hover {
+    cursor: pointer;
+}
+
+.cross:active {
+    width: 21px;
+}

@@ -504,7 +504,7 @@ body {
 }
 
 .fadeElm {
-    transition: opacity 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), -webkit-transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), filter 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
+    transition: opacity 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), -webkit-transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), filter 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), width 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
 }
 
 .invisible {
