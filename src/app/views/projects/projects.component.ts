@@ -25,6 +25,9 @@ export class ProjectsComponent {
     const myText = this.texts.find(item => item.Name === projectName);
 
     let dialogRef = this.dialog.open(ProjectTextComponent, {
+      maxWidth: 'none',
+      minWidth: '80vw',
+
       data: { name: myText?.Name, content: myText?.Content, link: myText?.Link, collaborators: myText?.Collaborators, duration: myText?.Duration, endDate: myText?.EndDate, skills: myText?.SkillsApplied, tools: myText?.Tools }
     });
   }

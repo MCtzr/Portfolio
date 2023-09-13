@@ -2,11 +2,12 @@
     background-color: var(--color-p-8);
     border-radius: 0px;
     border: 2px rgb(255, 255, 255) solid;
+    min-width: 250px;
 }
 
 .title,
 .dialog {
-    padding: 2vh 4vw;
+    padding: 2vh 5vw;
     color: white;
     white-space: pre-wrap;
     font-family: 'MyText', sans-serif;
@@ -37,8 +38,21 @@
     width: 100%;
 }
 
-.sub-block-caracteristics {
+a {
+    color: var(--color-p);
+}
 
+@media screen and (max-width: 600px) {
+    #dialog-caracteristics {
+        flex-direction: column;
+    }
+
+    .dialog {
+        text-align: left;
+    }
+}
+
+.sub-block-caracteristics {
     display: flex;
     flex-direction: column;
 }

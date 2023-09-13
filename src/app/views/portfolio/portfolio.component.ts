@@ -83,15 +83,23 @@ export class PortfolioComponent {
     // Obtenez la position de défilement verticale actuelle de la page
 
     if (window.innerWidth > 870) {
-      if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible) {
-        this.FadeEffectService.removeFadeObserver('first-container');
-      }
-      else if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && !this.fadeElmVisible) {
-        this.FadeEffectService.addFadeObserver('first-container');
-      }
-      this.fadeElmVisible = window.scrollY < 1 * window.innerHeight;
 
-      const myTab = document.getElementById("first-container")
+      const myTab = document.getElementById("first-container");
+
+      if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible && myTab) {
+        this.FadeEffectService.removeFadeObserver('first-container');
+        myTab.classList.remove('invisible');
+        myTab.classList.add('visible');
+      }
+      else if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && !this.fadeElmVisible && myTab) {
+        this.FadeEffectService.addFadeObserver('first-container');
+        myTab.classList.remove('invisible');
+        myTab.classList.add('visible');
+      }
+
+      this.fadeElmVisible = window.scrollY < window.innerHeight;
+
+
 
       const myWidth = 60 + ((delta / (0.5 * window.innerHeight)) * 40)
 

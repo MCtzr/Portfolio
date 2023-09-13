@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, ElementRef, Inject, Renderer2 } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { GlobalVariablesService } from 'src/app/components/global-variables.service';
@@ -20,10 +20,13 @@ export class ProjectTextComponent {
   theme: string = 'rgb(10, 13, 22)';
   subscription!: Subscription;
 
+
+
   constructor(
     public dialogRef: MatDialogRef<ProjectTextComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private globalService: GlobalVariablesService,
+    private renderer: Renderer2, private elementRef: ElementRef
   ) {
     this.collaborators = data.collaborators
     this.content = data.content
@@ -37,6 +40,11 @@ export class ProjectTextComponent {
     if (data.link != "") {
       this.link = data.link
     }
+  }
+
+  ngOnInit() {
+    const overlayElement = this.elementRef.nativeElement.querySelector('#cdk-overlay-0');
+    this.renderer.setStyle(overlayElement, 'max-width', 'none'); // Essayez 'none' ou 'unset'
   }
 
   close() {

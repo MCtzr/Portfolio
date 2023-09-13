@@ -47,7 +47,18 @@ This entire project was an opportunity for me to learn more about the profession
         Link: `https://github.com/MCtzr/lo10-project`,
         SkillsApplied: `web development (frontend & backend), encryption, security.`,
         Tools: `React, MSSQL, ExpressJS, swagger, Java web tokens`,
-        Content: ``
+        Content: `For my last semester I made at the University of Technology of Troyes, we had to create in group a software regarding some specifications :
+    - Use 5 different web services.
+    - Use a certain number of design patterns (kind of "good habit" in programming).
+    
+With my group, we made a web app using react for the frontend and expressJS/MSSQL for the backend proposing some french museums or arts to visitors.
+
+Because I've already worked a lot on Angular and React environment at Capgemini, I wanted to get more knowledges in security within the backend part, a subject that I didn't have the time to explore during my internship.
+
+So, I worked on the users' data, and the way to secure a connection to our web app, using Java web tokens, and credentials encryption and verification on MSSQL.
+
+The goal of my part was to deliver the project the most secured and professional possible.
+    `
     },
     {
         Collaborators: `Matéo CONDAT`,
@@ -56,8 +67,18 @@ This entire project was an opportunity for me to learn more about the profession
         Name: `Mandelbrot fractal visualizer`,
         Link: ``,
         SkillsApplied: `web development (frontend & backend), encryption, security.`,
-        Tools: `Javascript, JS Canvas, ChatGPT, Documentation`,
-        Content: ``
+        Tools: `Javascript, JS Canvas, JS Worker threads, ChatGPT, Documentation`,
+        Content: `After my internship at Capgemini, I've had a free month before starting my next course semester. I took this time to work on a smaller project regarding graphic visualization.
+        
+I learned a lot about different technologies like JS Canvas, and some frameworks like threeJS, openGL...
+
+Then I decided to create a web fractal generator. The goal was to use more maths inside computer sciences, because I'm still really passionate in this field.
+
+I've always been intrigued by fractals, and specially on the Mandelbrot fractal, maybe the most popular one. This tool is a Mandelbrot Fractal generator, which allows the user to modify some properties on the visualization like the Mandelbrot formula, colors, resolution.
+
+Because that's a web visualization, this one is lagging a lot contrary to a python visualization which would be much more faster. To reduce lags, I implemented some shaders to separate workload in multi-thread by using JS Workers.
+
+Finally, with the release of ChatGPT that revolutionated a part of our society, I experimented this really powerful technology for the first time in computer sciences to learn faster about these visualization tools and to implement my project easier.`
     },
     {
         Collaborators: `Sébastien BACOUP, Zoé BOUTIN, Matéo CONDAT, Maxence JAULIN`,
@@ -67,6 +88,8 @@ This entire project was an opportunity for me to learn more about the profession
         Link: `https://github.com/MCtzr/GL02Project`,
         SkillsApplied: `communication, team management, Software development`,
         Tools: `Javascript, ICalendar, Github.`,
-        Content: ``
+        Content: `During my first year of master formation, we had to create a javascript software in group of 4. The goal of this project was to create a software according to the specifications defined in a document given by our professors.
+        
+We also learned to use a GitHub repository in group, to work together and document well our project.`
     }
 ]

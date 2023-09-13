@@ -21,7 +21,7 @@
 
         <p class="dialog">{{content}}</p>
 
-        <a class="button" *ngIf="link" [href]="link">See more</a>
+        <p class="dialog"><a class="button" *ngIf="link" [href]="link">See more</a></p>
     </mat-dialog-content>
 
     <img class="cross" src="assets/icons/cross.png" (click)="close()" />
