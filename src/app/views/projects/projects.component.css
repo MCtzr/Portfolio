@@ -56,7 +56,117 @@ h3 {
     font-size: 1.25em;
 }
 
+:root {
+    --cap-background: 100%;
+}
 
+#capgemini-project {
+    background-color: #ebebeb;
+    background-image: url('src/assets/img/capgeminiBackground.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LO10-project {
+    background-color: #ebebeb;
+    background-image: url('src/assets/img/laVague.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#art-match-text {
+    position: absolute;
+    bottom: 100px;
+    left: 40%;
+    font-size: 1.5em;
+    color: var(--color-p-6);
+    font-family: TitleBold;
+}
+
+#gl02-text {
+    color: var(--color-s-1);
+    font-family: TitleBold;
+    font-size: 2em;
+}
+
+#capgemini-text {
+    color: #0070AD;
+    font-family: Capgemini;
+    font-size: 3em;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    transition: top 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
+}
+
+#capgemini-top-bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: top 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
+}
+
+.visible-project #capgemini-top-bg {
+    top: 0px;
+}
+
+.invisible-project #capgemini-top-bg {
+    top: -100%;
+}
+
+.visible-project #capgemini-text {
+    top: 25%;
+}
+
+.invisible-project #capgemini-text {
+    top: -100%;
+}
+
+
+#fractal-project {
+    background-color: #ebebeb;
+    background-image: url('src/assets/img/Mandelbrot.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#distory-project {
+    background-image: url('src/assets/img/distory.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+#GL02-project {
+    background-color: var(--color-p-6);
+    background-image: url('src/assets/img/calendar.png');
+    background-size: 30% auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#GL02-project .invisible-project {
+    background-position-y: 500px;
+}
+
+#GL02-project .visible-project {
+    background-position-y: 100%;
+}
+
+.invisible-project {
+    background-position-y: 500px;
+}
+
+.visible-project {
+    background-position-y: 100%;
+}
 
 @media screen and (max-width: 600px) {
 

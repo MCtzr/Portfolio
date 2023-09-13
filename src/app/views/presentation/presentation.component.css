@@ -104,11 +104,13 @@
         margin-right: auto;
         max-width: 100vw;
         margin-bottom: 3vh;
-        margin-top: 7vh;
+        margin-top: 0px;
+        padding-top: 7vh;
     }
 
     .personnal-picture {
-        width: 340px;
+        height: 80%;
+        width: auto;
     }
 
     .tile-3-2-presentation {

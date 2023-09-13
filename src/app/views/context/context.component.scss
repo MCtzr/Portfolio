@@ -14,13 +14,13 @@
     padding: 60px 60px;
     transform: translateX(calc(var(--scroll-value-context)*(-1)));
     transition: all 0.3s ease;
-    height: calc(60vh - 120px);
+    height: 100%;
     align-items: center;
 }
 
 .context-img-container {
     padding: 60px 60px;
-    height: calc(60vh - 120px);
+    height: 100%;
     transition: all 0.2s ease;
     transform: translateX(var(--scroll-value-context));
 }

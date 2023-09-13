@@ -9,10 +9,15 @@ import { GlobalVariablesService } from 'src/app/components/global-variables.serv
   styleUrls: ['./project-text.component.css']
 })
 export class ProjectTextComponent {
-  text: string | undefined;
+  collaborators: string | undefined;
+  content: string | undefined;
   name: string | undefined;
+  endDate: string | undefined;
+  link: string | undefined;
+  skills: string | undefined;
+  tools: string | undefined;
+  duration: string | undefined;
   theme: string = 'rgb(10, 13, 22)';
-  link: boolean = false;
   subscription!: Subscription;
 
   constructor(
@@ -20,25 +25,18 @@ export class ProjectTextComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private globalService: GlobalVariablesService,
   ) {
-    this.text = data.text
+    this.collaborators = data.collaborators
+    this.content = data.content
     this.name = data.name
+    this.endDate = data.endDate
+    this.link = data.link
+    this.skills = data.skills
+    this.tools = data.tools
+    this.duration = data.duration
 
     if (data.link != "") {
       this.link = data.link
     }
-  }
-
-  ngOnInit() {
-    // Souscrire à l'observable theme$ du service pour mettre à jour la variable theme
-    this.subscription = this.globalService.theme$.subscribe(theme => {
-      if (theme == "brown") {
-        this.theme = 'rgb(10,6,2)';
-      } else if (theme == "blue") {
-        this.theme = 'rgb(10, 13, 22)';
-      }
-      // Définir le CSS de l'élément body en fonction de la variable theme
-      document.documentElement.style.setProperty('--theme', this.theme);
-    });
   }
 
   close() {

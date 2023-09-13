@@ -3,10 +3,26 @@
     <h2 mat-dialog-title class="title">{{name}}</h2>
 
     <mat-dialog-content>
-        <p class="dialog">{{text}}</p>
+        <br>
+        <p class="dialog"><b>Collaborators : </b>{{collaborators}}</p>
+        <div id="dialog-caracteristics">
 
-        <button class="button" *ngIf="link">See more</button>
+            <div class="sub-block-caracteristics">
+                <p class="dialog"><b>Duration: </b>{{duration}}</p>
+                <p class="dialog"><b>End date: </b>{{endDate}}</p>
+            </div>
+            <div class="sub-block-caracteristics">
+                <p class="dialog"><b>Skills Applied: </b>{{skills}}</p>
+                <p class="dialog"><b>Tools: </b>{{tools}}</p>
+            </div>
+
+
+        </div>
+
+        <p class="dialog">{{content}}</p>
+
+        <a class="button" *ngIf="link" [href]="link">See more</a>
     </mat-dialog-content>
 
-    <img class="cross" src="../../../assets/icons/cross.png" (click)="close()" />
+    <img class="cross" src="assets/icons/cross.png" (click)="close()" />
 </div>

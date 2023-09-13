@@ -421,6 +421,12 @@ template {
 }
 
 @font-face {
+    font-family: Capgemini;
+    src: url(./assets/fonts/kalam/Kalam-Light.ttf) format("truetype");
+    /* Chemin vers le fichier de la police régulière */
+}
+
+@font-face {
     font-family: TitleBold;
     src: url(./assets/fonts/poppins/Poppins-Bold.ttf) format("truetype");
     /* Chemin vers le fichier de la police en gras */
@@ -474,6 +480,7 @@ body {
     margin: 0;
     color: var(--my-white);
     font-family: MyText, "Helvetica Neue", sans-serif;
+
 }
 
 .my-button {
@@ -504,7 +511,7 @@ body {
 }
 
 .fadeElm {
-    transition: opacity 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), -webkit-transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), filter 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), width 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
+    transition: background-position 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), -webkit-transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), transform 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), filter 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02), width 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
 }
 
 .invisible {

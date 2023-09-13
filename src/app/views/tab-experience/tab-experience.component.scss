@@ -66,11 +66,11 @@
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
+    padding: 5vh 0vw;
 }
 
 #tab-experience {
     width: 60%;
-    transition: width ease 0.3s;
     grid-auto-rows: calc(85vh - 60px);
     pointer-events: all;
 }
@@ -80,7 +80,7 @@
     border: solid 2px var(--color-s-1);
     width: 100px;
     height: 100px;
-    margin: 0vw 1.2vw;
+    margin: 0vw 1vw;
     position: relative;
     display: flex;
     align-items: center;
@@ -91,6 +91,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1vh 1vw;
 }
 
 .skill-item img {
@@ -104,6 +105,9 @@
     transition: opacity 0.3s ease, filter 0.3s ease; // Ajoutez une transition pour une animation fluide
 }
 
+.skill-item:hover {
+    cursor: grab;
+}
 
 .skill-item:hover img {
     filter: blur(2px); // Applique le flou au survol

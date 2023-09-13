@@ -6,6 +6,7 @@
 
 .title,
 .dialog {
+    padding: 2vh 4vw;
     color: white;
     white-space: pre-wrap;
     font-family: 'MyText', sans-serif;
@@ -29,4 +30,15 @@
 
 .cross:active {
     width: 21px;
+}
+
+#dialog-caracteristics {
+    display: flex;
+    width: 100%;
+}
+
+.sub-block-caracteristics {
+
+    display: flex;
+    flex-direction: column;
 }
