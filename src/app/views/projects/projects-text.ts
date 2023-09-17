@@ -26,7 +26,7 @@ Because it is a professional project, I can't divulgate any important informatio
 These kinds of projects, even if they are a little bit less inside the computer sciences field, permit me to learn how to lead a project and get a global vision of it while maintaining a long - term motivation and avoid mistakes.`
     },
     {
-        Collaborators: `Matéo CONDAT, Mélogram(recording studio).`,
+        Collaborators: `Matéo CONDAT, Mélogram (recording studio).`,
         Duration: `2 years and a half`,
         EndDate: `estimated dec. 2023`,
         Name: `Zombie`,

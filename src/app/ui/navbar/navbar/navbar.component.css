@@ -29,7 +29,6 @@
 .navbar-nav-item {
     display: flex;
     height: 60px;
-    font-size: 1em;
     justify-content: center;
     margin-left: 0;
     margin-right: 5%;
@@ -64,4 +63,30 @@ a:hover,
 }
 
 /* Media Query pour la navigation responsive */
-@media screen and (max-width: 950px) {}
+@media screen and (max-width: 700px) {
+    .navbar-nav-link {
+        font-size: 0.75em;
+    }
+
+    .navbar-nav {
+        height: 40px;
+    }
+
+    .navbar-nav-item {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-nav-link {
+        font-size: 0.65em;
+    }
+
+    .navbar-nav {
+        height: 35px;
+    }
+
+    .navbar-nav-item {
+        height: 35px;
+    }
+}

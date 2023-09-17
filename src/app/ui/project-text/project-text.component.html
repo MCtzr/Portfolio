@@ -4,24 +4,47 @@
 
     <mat-dialog-content>
         <br>
-        <p class="dialog"><b>Collaborators : </b>{{collaborators}}</p>
+        <div class="dialog-container">
+            <p class="dialog-title"><b>Collaborators : </b></p>
+            <p class="dialog">{{collaborators}}</p>
+        </div>
         <div id="dialog-caracteristics">
 
             <div class="sub-block-caracteristics">
-                <p class="dialog"><b>Duration: </b>{{duration}}</p>
-                <p class="dialog"><b>End date: </b>{{endDate}}</p>
+                <div>
+                    <div class="dialog-container">
+                        <p class="dialog-title"><b>Duration: </b></p>
+                        <p class="dialog">{{duration}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="dialog-container">
+                        <p class="dialog-title"><b>End date: </b></p>
+                        <p class="dialog">{{endDate}}</p>
+                    </div>
+                </div>
             </div>
             <div class="sub-block-caracteristics">
-                <p class="dialog"><b>Skills Applied: </b>{{skills}}</p>
-                <p class="dialog"><b>Tools: </b>{{tools}}</p>
+                <div>
+                    <div class="dialog-container">
+                        <p class="dialog-title"><b>Skills Applied: </b></p>
+                        <p class="dialog">{{skills}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="dialog-container">
+                        <p class="dialog-title"><b>Tools: </b></p>
+                        <p class="dialog">{{tools}}</p>
+                    </div>
+                </div>
             </div>
 
 
         </div>
 
-        <p class="dialog">{{content}}</p>
+        <p class="dialog-container">{{content}}</p>
 
-        <p class="dialog"><a class="button" *ngIf="link" [href]="link">See more</a></p>
+        <p class="dialog-container"><a class="button" *ngIf="link" [href]="link">See more</a></p>
     </mat-dialog-content>
 
     <img class="cross" src="assets/icons/cross.png" (click)="close()" />

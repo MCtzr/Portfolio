@@ -22,7 +22,7 @@ export class NavbarComponent {
     }
     else {
       if (navbar) {
-        navbar.style.top = '-5px';
+        navbar.style.top = '-1px';
       }
     }
     this.previousScrollY = currentScrollY;

@@ -6,11 +6,21 @@
 }
 
 .title,
-.dialog {
+.dialog-container {
     padding: 2vh 5vw;
     color: white;
     white-space: pre-wrap;
     font-family: 'MyText', sans-serif;
+}
+
+.dialog-title {
+    text-align: left;
+    display: inline;
+}
+
+.dialog {
+    text-align: justify;
+    display: inline;
 }
 
 .title {
@@ -47,9 +57,7 @@ a {
         flex-direction: column;
     }
 
-    .dialog {
-        text-align: left;
-    }
+
 }
 
 .sub-block-caracteristics {

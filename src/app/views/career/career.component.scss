@@ -159,6 +159,7 @@ svg {
     padding: 0px 10%;
     pointer-events: all;
     z-index: 5;
+    font-size: 1em;
 }
 
 .career-content-img {
@@ -297,6 +298,28 @@ svg {
 
     .timeline-grid {
         grid-auto-rows: 100%;
+    }
+
+    .career-content-text {
+        font-size: 1.7vw;
+    }
+
+    .content-element h2 {
+        font-size: 3vw;
+    }
+
+    .cross-character {
+        font-size: 4vw;
+        line-height: normal;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .cross-div {
+        top: 1vw;
+        right: 1vw;
+        width: fit-content;
+        height: fit-content;
     }
 }
 
