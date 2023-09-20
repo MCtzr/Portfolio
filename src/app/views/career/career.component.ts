@@ -77,6 +77,10 @@ export class CareerComponent {
         const parentRect = parent.getBoundingClientRect();
         const contentElementRect = child.getBoundingClientRect();
 
+        console.log(child.clientHeight + 2 * marginY)
+
+        console.log(parentRect.bottom)
+
         if (0 < parentRect.top) {
           child.style.position = 'absolute';
           child.style.top = marginY + "px";
@@ -93,8 +97,6 @@ export class CareerComponent {
           child.style.top = marginY + "px";
           console.log("fixed")
         }
-
-        console.log("parentRect.bottom = " + parentRect.top)
 
       })
     }

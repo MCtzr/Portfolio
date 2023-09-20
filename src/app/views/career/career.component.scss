@@ -324,10 +324,11 @@ svg {
 }
 
 @media screen and (max-width: 500px) {
-    .curve-grid {
-        background-color: var(--color-p-8);
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-auto-rows: calc(100vw * 150px / 500px);
+    .content-background {
+        height: auto;
+    }
+
+    .timeline-grid {
+        grid-auto-rows: fit-content;
     }
 }

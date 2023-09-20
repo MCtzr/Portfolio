@@ -112,6 +112,14 @@ h3 {
     transition: top 0.3s cubic-bezier(0.08, 0.35, 0.13, 1.02);
 }
 
+.invisible-project {
+    background-position-y: 500px;
+}
+
+.visible-project {
+    background-position-y: 100%;
+}
+
 .visible-project #capgemini-top-bg {
     top: 0px;
 }
@@ -120,11 +128,11 @@ h3 {
     top: -100%;
 }
 
-.visible-project #capgemini-text {
+#capgemini-text.visible-project {
     top: 25%;
 }
 
-.invisible-project #capgemini-text {
+#capgemini-text.invisible-project {
     top: -100%;
 }
 
@@ -147,25 +155,39 @@ h3 {
 #GL02-project {
     background-color: var(--color-p-6);
     background-image: url('src/assets/img/calendar.png');
-    background-size: 30% auto;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position-x: center;
 }
 
-#GL02-project .invisible-project {
+
+
+#GL02-project.invisible-project {
     background-position-y: 500px;
 }
 
-#GL02-project .visible-project {
-    background-position-y: 100%;
+#GL02-project.visible-project {
+    background-position-y: 90%;
 }
 
-.invisible-project {
-    background-position-y: 500px;
+@media screen and (max-width: 1000px) {
+    #art-match-text {
+        bottom: 33%;
+        left: 41%;
+        font-size: 1.3em;
+    }
 }
 
-.visible-project {
-    background-position-y: 100%;
+@media screen and (max-width: 700px) {
+    #gl02-text {
+        font-size: 4vw;
+    }
+
+    #art-match-text {
+        bottom: 27%;
+        left: 38%;
+        font-size: 4vw;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -177,5 +199,9 @@ h3 {
     #LO10-project,
     #fractal-project {
         order: 2;
+    }
+
+    #gl02-text {
+        font-size: 6vw;
     }
 }

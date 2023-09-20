@@ -24,7 +24,7 @@
 .personnal-picture {
     transition: all 0.5s;
     width: 70%;
-    border-radius: 20px;
+    border-radius: 100%;
 }
 
 .name {

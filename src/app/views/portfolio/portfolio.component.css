@@ -68,6 +68,7 @@ h3 {
 
 
 
+
 @media screen and (max-width: 1000px) {
 
     .content {
@@ -109,4 +110,10 @@ h3 {
         flex-wrap: wrap;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    #experience-title {
+        background-color: var(--color-p-8);
+    }
 }
