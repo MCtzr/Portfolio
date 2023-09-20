@@ -68,7 +68,7 @@ export class CareerComponent {
     if (children) {
       children.forEach((childRef: any) => {
 
-        const parent = this.el.nativeElement.querySelector('.content-background');
+        const parent = this.el.nativeElement.querySelector('.timeline-grid');
 
         const child = childRef;
 
@@ -77,19 +77,18 @@ export class CareerComponent {
         const parentRect = parent.getBoundingClientRect();
         const contentElementRect = child.getBoundingClientRect();
 
-        console.log(child.clientHeight + 2 * marginY)
+        console.log(parentRect.height)
 
-        console.log(parentRect.bottom)
+        console.log(parentRect.top)
 
         if (0 < parentRect.top) {
           child.style.position = 'absolute';
           child.style.top = marginY + "px";
           console.log("top")
         }
-        else if (child.clientHeight + 2 * marginY > parentRect.bottom) {
+        else if (child.clientHeight + 2 * marginY > parentRect.top + parentRect.height) {
           child.style.position = 'absolute';
-          child.style.top = "auto";
-          child.style.bottom = marginY + "px";
+          child.style.top = (-marginY + parentRect.height - contentElementRect.height) + "px";
           console.log("bot")
         }
         else {
