@@ -84,17 +84,17 @@ export class PortfolioComponent {
 
     if (window.innerWidth > 870) {
 
-      const myTab = document.getElementById("first-container");
+      const myContext = document.getElementById("first-container");
 
-      if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible && myTab) {
+      if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && this.fadeElmVisible && myContext) {
         this.FadeEffectService.removeFadeObserver('first-container');
-        myTab.classList.remove('invisible');
-        myTab.classList.add('visible');
+        myContext.classList.remove('invisible');
+        myContext.classList.add('visible');
       }
-      else if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && !this.fadeElmVisible && myTab) {
+      else if (this.fadeElmVisible !== window.scrollY < 1 * window.innerHeight && !this.fadeElmVisible && myContext) {
         this.FadeEffectService.addFadeObserver('first-container');
-        myTab.classList.remove('invisible');
-        myTab.classList.add('visible');
+        myContext.classList.remove('invisible');
+        myContext.classList.add('visible');
       }
 
       this.fadeElmVisible = window.scrollY < window.innerHeight;
@@ -103,20 +103,38 @@ export class PortfolioComponent {
 
       const myWidth = 60 + ((delta / (0.5 * window.innerHeight)) * 40)
 
-      if (myTab) {
+      if (myContext) {
         document.documentElement.style.setProperty('--experience-width', myWidth + '%');
       }
-    }
-    else {
-      const myTab = document.getElementById("first-container")
+
+      const myTab = document.getElementById("tab-experience")
 
       if (myTab) {
-        this.FadeEffectService.removeFadeObserver('first-container');
+        this.FadeEffectService.addFadeObserver('tab-experience');
         myTab.classList.remove('invisible');
         myTab.classList.add('visible');
+
       }
 
     }
+    else {
+      const myContext = document.getElementById("first-container")
 
+      if (myContext) {
+        this.FadeEffectService.removeFadeObserver('first-container');
+        myContext.classList.remove('invisible');
+        myContext.classList.add('visible');
+      }
+
+      const myTab = document.getElementById("tab-experience")
+
+      if (myTab) {
+        this.FadeEffectService.removeFadeObserver('tab-experience');
+        myTab.classList.remove('invisible');
+        myTab.classList.add('visible');
+
+      }
+
+    }
   }
 }
