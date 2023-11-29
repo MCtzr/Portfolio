@@ -18,6 +18,7 @@ import { FadeEffectService } from 'src/app/components/fade-effect.service';
     ])
   ]
 })
+
 export class PortfolioComponent {
   innerHeight: number = window.innerHeight;
   fadeElmVisible: boolean = true;
