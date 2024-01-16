@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PORTFOLIO_TOKEN }}
-          publish_dir: ./dist/browser # Le répertoire racine est spécifié ici 
+          publish_dir: ./dist # Le répertoire racine est spécifié ici 
