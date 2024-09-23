@@ -68,7 +68,7 @@
         </div>
 
         <div class="skill-item-container">
-            <div class="skill-item" (mouseenter)="hoverSkill(5, 80)" (mouseleave)="resetProgress(5)">
+            <div class="skill-item" (mouseenter)="hoverSkill(5, 90)" (mouseleave)="resetProgress(5)">
                 <img src="assets/img/skills/react.png" alt="" width="50%">
                 <mat-progress-spinner mode="determinate" [value]="tabValue[5]" class="spinner"></mat-progress-spinner>
 
@@ -151,7 +151,7 @@
         </div>
 
         <div class="skill-item-container">
-            <div class="skill-item" (mouseenter)="hoverSkill(5, 20)" (mouseleave)="resetProgress(5)">
+            <div class="skill-item" (mouseenter)="hoverSkill(5, 70)" (mouseleave)="resetProgress(5)">
                 <img src="assets/img/skills/spring.png" alt="" width="50%">
                 <mat-progress-spinner mode="determinate" [value]="tabValue[5]" class="spinner"></mat-progress-spinner>
 
@@ -291,7 +291,7 @@
     <div class="skill-content content-centered tile-2-1" *ngIf='tab === "Design"'>
 
         <div class="skill-item-container">
-            <div class="skill-item" (mouseenter)="hoverSkill(0, 60)" (mouseleave)="resetProgress(0)">
+            <div class="skill-item" (mouseenter)="hoverSkill(0, 70)" (mouseleave)="resetProgress(0)">
                 <img src="assets/img/skills/gimp.png" alt="" width="50%">
                 <mat-progress-spinner mode="determinate" [value]="tabValue[0]" class="spinner"></mat-progress-spinner>
 
@@ -301,9 +301,29 @@
         </div>
 
         <div class="skill-item-container">
-            <div class="skill-item" (mouseenter)="hoverSkill(1, 85)" (mouseleave)="resetProgress(1)">
+            <div class="skill-item" (mouseenter)="hoverSkill(1, 60)" (mouseleave)="resetProgress(1)">
+                <img src="assets/img/skills/afterEffect.png" alt="" width="50%">
+                <mat-progress-spinner color="var(--color-s)" mode="determinate" [value]="tabValue[1]"
+                    class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>After Effects</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(2, 40)" (mouseleave)="resetProgress(2)">
+                <img src="assets/img/skills/illustrator.png" alt="" width="50%">
+                <mat-progress-spinner color="var(--color-s)" mode="determinate" [value]="tabValue[2]"
+                    class="spinner"></mat-progress-spinner>
+            </div>
+
+            <p>Illustrator</p>
+        </div>
+
+        <div class="skill-item-container">
+            <div class="skill-item" (mouseenter)="hoverSkill(3, 85)" (mouseleave)="resetProgress(3)">
                 <img src="assets/img/skills/drawio.png" alt="" width="50%">
-                <mat-progress-spinner mode="determinate" [value]="tabValue[1]" class="spinner"></mat-progress-spinner>
+                <mat-progress-spinner mode="determinate" [value]="tabValue[3]" class="spinner"></mat-progress-spinner>
 
             </div>
 
@@ -311,9 +331,9 @@
         </div>
 
         <div class="skill-item-container">
-            <div class="skill-item" (mouseenter)="hoverSkill(2, 45)" (mouseleave)="resetProgress(2)">
+            <div class="skill-item" (mouseenter)="hoverSkill(4, 45)" (mouseleave)="resetProgress(4)">
                 <img src="assets/img/skills/figma.png" alt="" width="50%">
-                <mat-progress-spinner mode="determinate" [value]="tabValue[2]" class="spinner"></mat-progress-spinner>
+                <mat-progress-spinner mode="determinate" [value]="tabValue[4]" class="spinner"></mat-progress-spinner>
             </div>
 
             <p>Figma</p>

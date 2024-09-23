@@ -1,15 +1,19 @@
 <div class="context-container">
 
-    <h1 class="title black-text text-centered">Context</h1>
+    <h1 class="title black-text text-centered">{{ 'header.context' | translate }}</h1>
     <div class="context-grid">
 
         <div class="tile-1-1 context-text-container content-centered">
-            <p>Hi, my name is Matéo, and I'm a French student at the University of Technology of Troyes,
-                specializing
-                in software development.<br><br>In this portfolio, you will find an overview of my career, my skills,
-                and the projects I have undertaken during my studies.<br><br>To create it,
-                I used the AngularTS framework with pure SCSS. The background was created using Three.js, and
-                the icons are sourced from Flaticon. Lastly, the result is automatically deployed on GitHub Pages.
+            <p>
+                {{ 'context.description.p1' | translate }}
+                
+                <br><br>
+                
+                {{ 'context.description.p2' | translate }}
+                
+                <br><br>
+                
+                {{ 'context.description.p3' | translate }}
             </p>
         </div>
         <div class="tile-1-1 content-centered context-img-container">
@@ -32,7 +36,7 @@
             </a></div>
         <div class="source-icon"><a href="https://github.com/MCtzr/Portfolio"><img src="assets/icons/github.png"
                     alt="flaticon" width="40px" height="40px">
-                <p>Git&nbsp;Repo.</p>
+                <p>GitHub&nbsp;Pages</p>
             </a></div>
     </div>
 </div>

@@ -1,0 +1,55 @@
+{
+    "header": {
+        "presentation": "Présentation",
+        "context": "Contexte",
+        "experience": "Expérience",
+        "projects": "Projets",
+        "skills": "Compétences"
+    },
+    "presentation": {
+        "first-name": "Matéo",
+        "last-name": "CONDAT",
+        "subtitle": "Ingénieur Logiciel",
+        "pitch": "Je suis un ingénieur récemment diplômé en développement logiciel de l'Université de Technologie de Troyes."
+    },
+    "context": {
+        "description": {
+            "p1": "Bonjour, je m'appelle Matéo, et je suis un ingénieur français diplômé de l'Université de Technologie de Troyes, spécialisé en développement logiciel.",
+            "p2": "Dans ce portfolio, vous trouverez un aperçu de mon parcours, de mes compétences et des projets que j'ai réalisés durant mes études.",
+            "p3": "Pour le créer, j'ai utilisé le framework AngularTS avec du SCSS pur. L'arrière-plan a été créé avec Three.js, et les icônes proviennent de Flaticon. Enfin, le résultat est automatiquement déployé sur GitHub Pages."
+        }
+    },
+    "experience": {
+        "bubble-1": {
+            "title": "Sept. 2019 : Baccalauréat",
+            "description-1": "Après avoir obtenu mon baccalauréat avec mention bien, j'ai été admis et j'ai commencé ma formation d'ingénieur à l'Université de Technologie de Troyes.",
+            "description-2": "Durant les deux premières années, j'ai suivi une classe préparatoire où j'ai étudié les Mathématiques, la Physique, l'Informatique et la Chimie."
+        },
+        "bubble-2": {
+            "title": "Sept. 2021 : Programme en Informatique",
+            "description-1": "J'ai enfin entamé ma troisième année de formation d'ingénieur pour commencer mon programme en informatique et systèmes d'information.",
+            "description-2": "L'année suivante, je me suis spécialisé en développement logiciel (principalement en développement web) et en gestion de projet."
+        },
+        "bubble-3": {
+            "title": "Sept. 2022 : Stage",
+            "description-1": "Pendant mes études, j'ai eu l'opportunité de réaliser un stage de 6 mois chez Capgemini Engineering à Toulouse. Durant ce stage, j'étais responsable du",
+            "link": "développement full-stack d'une application web de gestion des données.",
+            "description-2": "J'y ai beaucoup appris sur la programmation professionnelle avec GitHub et la gestion de projet en utilisant l'approche Scrum-Agile."
+        },
+        "bubble-4": {
+            "title": "Sept. 2023 : Expérience Erasmus",
+            "description-1": "En 2023, j'ai effectué un échange de 6 mois dans le cadre du programme Erasmus+ à l'Université de Malmö en Suède.",
+            "description-2": "Cette expérience a été particulièrement enrichissante, notamment pour améliorer mes compétences en anglais et expérimenter le travail dans un environnement anglophone. C'était aussi l'occasion de découvrir ce magnifique pays et sa culture fascinante."
+        },
+        "bubble-5": {
+            "title": "Fév. 2024 : Projet de fin d'études",
+            "description-1": "Durant le dernier semestre, j'ai réalisé un stage de 6 mois chez Reeliant, une PME parisienne spécialisée en développement logiciel. C'est ainsi que j'ai complété ma formation d'ingénieur.",
+            "description-2": "J'ai pu y acquérir des compétences en communication et organisation, ainsi que des compétences transverses relatives aux nouvelles IA génératives."
+        },
+        "bubble-6": {
+            "title": "Sept. 2024 : Diplôme UTT",
+            "description-1": "Je viens de terminer ma formation d'ingénieur et je suis actuellement à la recherche d'un emploi en développement logiciel. Je suis ouvert à toute proposition.",
+            "description-2": "Si mon profil vous intéresse, n'hésitez pas à me contacter en utilisant l'email renseigné au bas de cette page !"
+        }
+    }
+}

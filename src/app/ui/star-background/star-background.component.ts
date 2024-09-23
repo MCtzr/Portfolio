@@ -37,7 +37,7 @@ export class StarBackgroundComponent {
 
   ngOnInit(scene: { background: THREE.Texture; }) {
 
-    if (window.innerWidth > 500) {
+    if (window.innerWidth > 500 ) {
       this.renderer.setSize(window.innerWidth, 1600);
       this.elRef.nativeElement.querySelector('.threediv').appendChild(this.renderer.domElement);
 
@@ -112,7 +112,7 @@ export class StarBackgroundComponent {
 
     const starSprite0 = new THREE.TextureLoader().load(`assets/img/etoile1-min.png`);
 
-    const starMaterial0 = new THREE.PointsMaterial({ size: 250, sizeAttenuation: true, map: starSprite0, alphaTest: 0.5, transparent: true });
+    const starMaterial0 = new THREE.PointsMaterial({ size: 1, sizeAttenuation: true, map: starSprite0, alphaTest: 0.5, transparent: true });
 
     this.starMaterials.push(starMaterial0)
   }
